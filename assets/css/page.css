@@ -47,7 +47,7 @@ body, html {
 #about {
   color: #666;
   background-color:white;
-  padding:50px 80px;
+  padding:50px 0px;
   text-align: left;
 }
 
@@ -59,11 +59,12 @@ body, html {
 }
 
 #about p {
-  margin: 20px 120px;
+  padding: 20px 20px;
   font-size: 18px;
 }
 
 #information {
+    font-family: 'Raleway', sans-serif;
     background: url(../img/slide2.JPG) no-repeat center center fixed;
     display: table;
     height: 800px;
@@ -83,4 +84,81 @@ body, html {
     padding: 40px;
     margin: 80px 0;
     font-size: 18px;
+}
+
+.maintext h2{
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  color: #555;
+}
+.maintext p, .maintext .twitter-timeline{
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/*Concerts*/
+
+.concerts{
+  margin: 40px 0;
+}
+.concerts li{
+  list-style-type: none;
+  color: #333;
+  padding: 20px;
+  border-bottom: 1px solid #EEE;
+}
+.concerts li a{
+  color: #00B8D4;
+  border-bottom: 1px dotted #777;
+  text-decoration: none;
+}
+.concerts li .date{
+  font-weight: bold;
+}
+.concerts li .title{
+  color: #00B8D4;
+  font-size: 18px;
+}
+.concerts li .about{
+
+}
+.concerts li .more{
+  display: inline-block;
+  float: right;
+}
+
+
+/*Social*/
+
+.social .twitter-block{
+  margin: 50px auto;
+  text-align: center;
+}
+
+/*Gallery*/
+
+#gallery{
+  margin-bottom: 100px;
+  text-align: center;
+}
+#gallery img{
+  /*height: 300px;*/
+  width: 100%;
+  margin: 0 auto;
+}
+#gallery img.portrait{
+  /*max-width: 16.66%;*/
+}
+
+
+
+/*General*/
+.blue{
+  color: #00B8D4; 
+}
+.clear-paddings{
+  padding: 0;
+}
+.clear-margins{
+  margin: 0;
 }
