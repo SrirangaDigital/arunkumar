@@ -50,17 +50,23 @@ body, html {
   padding:50px 0px;
   text-align: left;
 }
-
 #about h3 {
   letter-spacing: 5px;
   text-transform: uppercase;
   font: 20px "Lato", sans-serif;
   color: #111;
 }
-
 #about p {
   padding: 20px 20px;
   font-size: 18px;
+}
+#about .sign {
+  text-align: right;
+  font-style: italic;
+  color: #00B8D4;
+}
+#about .sign a{
+  color: inherit;
 }
 
 #information {
@@ -90,8 +96,12 @@ body, html {
   font-family: 'Playfair Display', serif;
   text-align: center;
   color: #555;
+  margin-bottom: 40px;
 }
-.maintext p, .maintext .twitter-timeline{
+.maintext p,
+.maintext ul,
+.maintext h4,
+.maintext .twitter-timeline{
   font-family: 'Raleway', sans-serif;
 }
 
@@ -130,6 +140,14 @@ body, html {
 
 /*Social*/
 
+.social .social-icons{
+  text-align: center;
+  margin: 40px 0;
+}
+.social .social-icons img{
+  width: 40px;
+  margin: 0 20px;
+}
 .social .twitter-block{
   margin: 50px auto;
   text-align: center;
@@ -151,6 +169,12 @@ body, html {
 }
 
 
+/*Contact*/
+
+#contact{
+  text-align: center;
+  margin-bottom: 100px;
+}
 
 /*General*/
 .blue{
@@ -162,7 +186,20 @@ body, html {
 .clear-margins{
   margin: 0;
 }
-
+.gap-below{
+  margin-bottom: 40px;
+}
+#profile{
+  color: #333;
+  padding: 40px 100px;
+}
+#profile h4{
+  color: #00B8D4; 
+  margin-top: 40px;
+}
+#profile h4:first-of-type{
+  margin-top: 0px;
+}
 
 @media(min-width:768px) {
   #home, #information{
