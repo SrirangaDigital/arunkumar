@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+ <!-- Basic Page Needs
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <meta charset="utf-8">
+ <title>Arun Kumar | Drummer</title>
+ <meta name="description" content="">
+ <meta name="author" content="">
+
+ <!-- Mobile Specific Metas
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!-- Javascript calls
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+ 
+ <!-- CSS
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <link rel="stylesheet" href="assets/css/normalize.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+ <!-- <link rel="stylesheet" href="css/skeleton.css"> -->
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+ 
+ <link rel="stylesheet" href="assets/css/navbar.css?v=2.0">
+ <link rel="stylesheet" href="assets/css/page.css?v=2.0">
+ <link rel="stylesheet" href="assets/css/viewer.css?v=2.0">
+ <!-- <link rel="stylesheet" href="assets/css/general.css?v=1.0"> -->
+ <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-main">
+				<ul class="nav navbar-nav invert navbar-right">
+					<li><a href="index.html#">Home</a></li>
+					<li><a href="index.html#about">Profile</a></li>
+					<li><a href="index.html#schedule">Events</a></li>
+					<li><a href="index.html#gallery">Gallery</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="maintext">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>In Concerts</h2>
+					<div class="masonry" id="imageViewer">
+						<div class="brick"><img data-original="assets/img/gallery/concerts/003.jpg" src="assets/img/gallery/concerts/003.jpg"></div>
+						<div class="brick"><img data-original="assets/img/gallery/concerts/004.jpg" src="assets/img/gallery/concerts/004.jpg"></div>
+						<div class="brick"><img data-original="assets/img/gallery/concerts/005.jpg" src="assets/img/gallery/concerts/005.jpg"></div>
+						<div class="brick"><img data-original="assets/img/gallery/concerts/006.jpg" src="assets/img/gallery/concerts/006.jpg"></div>
+						<div class="brick"><img data-original="assets/img/gallery/concerts/007.jpg" src="assets/img/gallery/concerts/007.jpg"></div>
+						<div class="brick"><img data-original="assets/img/gallery/concerts/008.jpg" src="assets/img/gallery/concerts/008.jpg"></div>
+						<div class="brick"><img data-original="assets/img/gallery/concerts/024.jpg" src="assets/img/gallery/concerts/024.jpg"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="assets/js/viewer.js"></script>
+	<script type="text/javascript">
+		var vieweroptions = { url: 'data-original' };
+		if(document.getElementById('imageViewer'))
+			var viewer = new Viewer(document.getElementById('imageViewer'), vieweroptions);
+	</script>
+</body>
+</html>
