@@ -27,7 +27,6 @@
  
  <link rel="stylesheet" href="assets/css/navbar.css?v=2.0">
  <link rel="stylesheet" href="assets/css/page.css?v=2.0">
- <link rel="stylesheet" href="assets/css/viewer.css?v=2.0">
  <!-- <link rel="stylesheet" href="assets/css/general.css?v=1.0"> -->
  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
 </head>
@@ -58,24 +57,75 @@
 	</nav>
 
 	<div class="maintext">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<h2>Grace of the Gurus</h2>
-					<div class="masonry" id="imageViewer">
-						<div class="brick"><img data-original="assets/img/gallery/gurus/015.jpg" src="assets/img/gallery/gurus/015.jpg"></div>
-						<div class="brick"><img data-original="assets/img/gallery/gurus/040.jpg" src="assets/img/gallery/gurus/040.jpg"></div>
-					</div>
+				<div id="profile" class="col-md-12">
+					<h2>Upcoming Performances</h2>
+					<ul class="concerts">
+						<li data-date="2017-12-25">
+							<p class="date">25 December 2017</p>
+							<p class="about">With Singer Karthick in Chennai for Music season at Kamaraja Arangam</p>
+						</li>
+						<li data-date="2017-12-31">
+							<p class="date">31 December 2017</p>
+							<p class="about">with Singer Vijay Prakash in Chennai for Private Audience</p>
+						</li>
+						<li data-date="2018-01-07">
+							<p class="date">7 January 2018</p>
+							<p class="about">Performing Morsing for Vocal concert near Bangalore</p>
+						</li>
+						<li data-date="2018-01-09">
+							<p class="date">9 January 2018</p>
+							<p class="about">Performing Morsing for Traditonal carnatic concert at Ramakrsihana Ashram Bangalore</p>
+						</li>
+						<li data-date="2018-01-13">
+							<p class="date">13 January 2018</p>
+							<p class="about">With Singer M D Pallavi at Davanagere for a Private Concert</p>
+						</li>
+						<li data-date="2018-01-14">
+							<p class="date">14 January 2018</p>
+							<p class="about">With renowned singers of Kannada film industry at Bangalore</p>
+						</li>
+						<li data-date="2018-01-15">
+							<p class="date">15 January 2018</p>
+							<p class="about">Performing in Bangalore for a Music school event</p>
+						</li>
+						<li data-date="2018-01-20">
+							<p class="date">20 January 2018</p>
+							<p class="about">Performing with Vijay TV Super Singers in London with for a world tour project</p>
+						</li>
+						<li data-date="2018-01-24">
+							<p class="date">24 January 2018</p>
+							<p class="about">Performing with LayaTharanga at TTD at Tirumala</p>
+						</li>
+						<li data-date="2018-01-26">
+							<p class="date">26 January 2018</p>
+							<p class="about">Performing special concert with N Amrit, Giridhar Udupa and Ravichandra Kulur in Bangalore</p>
+						</li>
+						<!-- Template -->
+						<!-- <li>
+							<p class="date">12 January 2018</p>
+							<p class="title">Bacardi NH7 Weekender</p>
+							<p class="about">Whenever the Weekender dates are announced, it gets everyone talking. The NH7 Weekender has never once failed to infuse an enthusiasm in the crowd that can be accorded to another time of the year... <span class="more"><a href="#">more</a></span></p>
+						</li> -->
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<script type="text/javascript" src="assets/js/viewer.js"></script>
+	<script type="text/javascript" src="assets/js/twitter-restyle.js"></script>
 	<script type="text/javascript">
-		var vieweroptions = { url: 'data-original' };
-		if(document.getElementById('imageViewer'))
-			var viewer = new Viewer(document.getElementById('imageViewer'), vieweroptions);
+		$(document).ready(function(){
+
+			var today = new Date();
+			$('.concerts li').each(function(index){
+
+				var date = new Date($(this).attr('data-date'));
+				if(date < today)
+					$(this).remove();
+			});
+		});
 	</script>
 </body>
 </html>

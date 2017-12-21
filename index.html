@@ -26,7 +26,7 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
  
  <link rel="stylesheet" href="assets/css/navbar.css?v=2.0">
- <link rel="stylesheet" href="assets/css/page.css?v=2.0">
+ <link rel="stylesheet" href="assets/css/page.css?v=2.1">
  <!-- <link rel="stylesheet" href="assets/css/general.css?v=1.0"> -->
  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
 </head>
@@ -93,19 +93,56 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
-					<h2>Upcoming concerts</h2>
+					<h2>Upcoming Performances</h2>
 					<ul class="concerts">
-						<li>
-							<p class="date">24 December 2017</p>
-							<p class="title">Sunburn Festival, Goa</p>
-							<p class="about">It's everyone's favourite idea of vacation. When the Sunburn festival chose its location as Goa, they definitely guaranteed a good deal of attendees already.... <span class="more"><a href="#">more</a></span></p>
+						<li data-date="2017-12-25">
+							<p class="date">25 December 2017</p>
+							<p class="about">With Singer Karthick in Chennai for Music season at Kamaraja Arangam</p>
 						</li>
-						<li>
+						<li data-date="2017-12-31">
+							<p class="date">31 December 2017</p>
+							<p class="about">with Singer Vijay Prakash in Chennai for Private Audience</p>
+						</li>
+						<li data-date="2018-01-07">
+							<p class="date">7 January 2018</p>
+							<p class="about">Performing Morsing for Vocal concert near Bangalore</p>
+						</li>
+						<li data-date="2018-01-09">
+							<p class="date">9 January 2018</p>
+							<p class="about">Performing Morsing for Traditonal carnatic concert at Ramakrsihana Ashram Bangalore</p>
+						</li>
+						<li data-date="2018-01-13">
+							<p class="date">13 January 2018</p>
+							<p class="about">With Singer M D Pallavi at Davanagere for a Private Concert</p>
+						</li>
+						<li data-date="2018-01-14">
+							<p class="date">14 January 2018</p>
+							<p class="about">With renowned singers of Kannada film industry at Bangalore</p>
+						</li>
+						<li data-date="2018-01-15">
+							<p class="date">15 January 2018</p>
+							<p class="about">Performing in Bangalore for a Music school event</p>
+						</li>
+						<li data-date="2018-01-20">
+							<p class="date">20 January 2018</p>
+							<p class="about">Performing with Vijay TV Super Singers in London with for a world tour project</p>
+						</li>
+						<li data-date="2018-01-24">
+							<p class="date">24 January 2018</p>
+							<p class="about">Performing with LayaTharanga at TTD at Tirumala</p>
+						</li>
+						<li data-date="2018-01-26">
+							<p class="date">26 January 2018</p>
+							<p class="about">Performing special concert with N Amrit, Giridhar Udupa and Ravichandra Kulur in Bangalore</p>
+						</li>
+						<!-- Template -->
+						<!-- <li>
 							<p class="date">12 January 2018</p>
 							<p class="title">Bacardi NH7 Weekender</p>
 							<p class="about">Whenever the Weekender dates are announced, it gets everyone talking. The NH7 Weekender has never once failed to infuse an enthusiasm in the crowd that can be accorded to another time of the year... <span class="more"><a href="#">more</a></span></p>
-						</li>
+						</li> -->
 					</ul>
+					<p class="sign"><a href="schedule.html">Full list</a></p>
 				</div>
 				<div class="col-sm-6 social">
 					<h2>@DrumsArunKumar</h2>
@@ -148,7 +185,7 @@
 				<a href="gallery-concerts.html" class="anchor-block">	
 					<div class="col-md-2 clear-paddings img-container">
 						<img class="album img-responsive" src="assets/img/thumbs/01.jpg?v=2.0">
-						<div class="album-title"><div class="text">In Concerts</div></div>
+						<div class="album-title"><div class="text">Concerts / Tours</div></div>
 					</div>
 				</a>
 			</div>
@@ -159,7 +196,7 @@
 	<div id="contact" class="maintext">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-4">
 					<h2>Contact</h2>
 					<p>
 						B S ARUN KUMAR<br />
@@ -169,10 +206,30 @@
 						rhythmarun@gmail.com<br />
 					</p>
 				</div>
+				<div class="col-md-8">
+					<h2>Endorsements</h2>
+					<a href="https://zildjian.com/artists/arun-kumar" target="_blank"><img src="assets/img/zildjian.png"></a>
+					<a href="http://vicfirth.com/artist/Arun_Kumar/" target="_blank"><img src="assets/img/vic-firth.png"></a>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<script type="text/javascript" src="assets/js/twitter-restyle.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var today = new Date();
+			$('.concerts li').each(function(index){
+
+				var date = new Date($(this).attr('data-date'));
+				if(date < today)
+					$(this).remove();
+			});
+
+			$('.concerts li').hide();
+			$('.concerts li').slice(0, 4).show();
+		});
+	</script>
 </body>
 </html>
