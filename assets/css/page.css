@@ -205,6 +205,14 @@ body, html {
 }
 
 /*General*/
+a {
+  color: #00B8D4;
+  text-decoration: none;
+}
+a:hover {
+  color: #00B8D4;
+  text-decoration: none;
+}
 .blue{
   color: #00B8D4; 
 }
